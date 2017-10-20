@@ -1,0 +1,122 @@
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.site-container {
+  width: 60rem;
+  margin: 0 auto;
+}
+
+          /*  Header  */
+
+header {
+  background-color: hsl(175, 20%, 90%);
+}
+
+nav {
+  display: flex;
+  margin-right: 1.5rem;
+}
+
+nav p {
+  margin: 0 0.5rem;
+}
+
+.header-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+.company-id {
+  height: 2rem;
+  display: flex;
+  margin-left: 1.5rem;
+  flex-direction: row;
+  align-items: center;
+}
+
+.company-id img {
+  height: 100%;
+  margin-right: 0.5rem;
+}
+
+#colmar {
+  font-weight: 900;
+  color: hsl(0, 0%, 10%);
+}
+
+#academy {
+  font-weight: 100;
+  color: hsl(0, 0%, 50%);
+}
+
+          /*  First section: getting started  */
+
+.banner {
+  display: flex;
+  justify-content: flex-start;
+  background-color: hsl(0,180,0);
+}
+
+.large-image-container {
+  max-width: 33.6rem%;
+  height: 26.5625rem;
+  overflow: hidden;
+  margin: 2rem 1.5rem;
+}
+
+.large-image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem 1.5rem;
+}
+
+.banner-text h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.banner-text h3 {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+
+.banner-text a {
+  padding: 0.5rem 0 0.5rem 0;
+  background-color: rgb(60,60,60);
+  text-align: center;
+  color: hsl(360, 100%, 100%);
+  border-radius: 0.5rem;
+}
+
+          /* Second section: how to visit the campus */
+
+.information {
+  display: flex;
+  background-color: hsl(175, 20%, 90%);
+}
+
+.information-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.information-main-text {
+  margin: 0 1.5rem;
+}
+
+.information-main-text h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
