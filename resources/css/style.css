@@ -8,6 +8,23 @@ html {
   margin: 0 auto;
 }
 
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p,a {
+  font-size: 1rem;
+}
+
           /*  Header  */
 
 header {
@@ -58,28 +75,29 @@ nav p {
 
 .banner {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   background-color: hsl(0,180,0);
 }
 
-.large-image-container {
-  max-width: 33.6rem%;
-  height: 26.5625rem;
+.banner-image-container {
+  width: 33rem;
+  height: auto;
   overflow: hidden;
-  margin: 2rem 1.5rem;
+  padding: 2rem 1.5rem;
 }
 
-.large-image-container img {
-  max-width: 100%;
-  height: auto;
+.banner-image-container img {
+  width: 100%;
+  max-height: auto;
   display: block;
 }
 
 .banner-text {
   display: flex;
+  max-width: 20rem;
   flex-direction: column;
   justify-content: center;
-  margin: 2rem 1.5rem;
+  padding: 2rem 1.5rem;
 }
 
 .banner-text h1 {
@@ -87,8 +105,7 @@ nav p {
   font-weight: 700;
 }
 
-.banner-text h3 {
-  font-size: 1.5rem;
+.banner-text h4 {
   margin: 2rem 0;
 }
 
@@ -102,14 +119,32 @@ nav p {
 
           /* Second section: how to visit the campus */
 
+.information-background {
+  background-color: hsl(175, 20%, 90%);
+}
+
 .information {
   display: flex;
-  background-color: hsl(175, 20%, 90%);
+  justify-content: space-between;
 }
 
 .information-main {
   display: flex;
   flex-direction: column;
+  width: 36rem;
+}
+
+.information-main-image-container {
+  width: 33rem;
+  height: auto;
+  overflow: hidden;
+  padding: 2rem 1.5rem;
+}
+
+.information-main-image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .information-main-text {
@@ -117,6 +152,115 @@ nav p {
 }
 
 .information-main-text h2 {
-  font-size: 1.75rem;
-  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.information-main-text h5 {
+  margin: 2rem 0;
+}
+
+.information-sidebar {
+  width: 24rem;
+}
+
+.sidebar-item-container {
+  border: 1px hsl(360, 0%, 50%) solid;
+}
+
+.sidebar-item-container:first-child {
+  padding-top: 1rem;
+  border-top: 0;
+}
+
+.sidebar-item-container:last-child {
+  padding-bottom: 6rem;
+  border-bottom: 0;
+}
+
+.sidebar-item-container:nth-child(0n+2) {
+  margin: 1px 0;
+}
+
+.sidebar-item {
+  display: flex;
+  width: 24rem;
+  margin-right: 0;
+}
+
+.sidebar-item:hover {
+  background-color: hsl(360, 100%, 100%);
+}
+
+.sidebar-image-container {
+  width: 7.35rem;
+  height: auto;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.sidebar-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sidebar {
+  width: 15.65rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar p {
+  padding: 0.5rem 0;
+  line-height: 1.2rem;
+}
+
+.sidebar a {
+  color: hsl(210, 50%, 50%);
+}
+
+.sidebar p,a {
+  font-size: 0.8rem;
+}
+
+          /* Third section: courses offered */
+
+.courses-background {
+  background-color: hsl(360, 10%, 100%);
+}
+
+.courses {
+  display: flex;
+  flex-direction: column;
+}
+
+.courses-title {
+  margin: 2rem auto;
+}
+
+.courses-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 52rem;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 34rem;
+}
+
+.course-card {
+  width: 16rem;
+  margin: 1rem 0;
+}
+
+.course-card:nth-child(3n+2) {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.course-image-container {
+  overflow: hidden;
+
 }
