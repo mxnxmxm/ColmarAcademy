@@ -1,6 +1,6 @@
 html {
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .site-container {
@@ -14,16 +14,30 @@ h2 {
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 h4 {
   font-size: 1rem;
 }
 
-p,a {
+p,a{
   font-size: 1rem;
 }
+
+ul {
+  list-style:  outside;
+  font-size: 0.85rem;
+}
+
+.quotation {
+  line-height: 1.5rem;
+  color: hsl(0, 0%, 30%);
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+
 
           /*  Header  */
 
@@ -61,6 +75,10 @@ nav p {
   margin-right: 0.5rem;
 }
 
+.mobile-icons {
+  display: none;
+}
+
 #colmar {
   font-weight: 900;
   color: hsl(0, 0%, 10%);
@@ -69,6 +87,23 @@ nav p {
 #academy {
   font-weight: 100;
   color: hsl(0, 0%, 50%);
+}
+
+          /* Header for narrow screens */
+
+@media only screen and (max-width:960px) {
+  #colmar, #academy, nav {
+    display: none;
+  }
+
+  .mobile-icons {
+    display: inline;
+    padding: 1.5rem;
+  }
+
+  .header-bar {
+    width: auto;
+  }
 }
 
           /*  First section: getting started  */
@@ -114,24 +149,62 @@ nav p {
 
 .banner-text a {
   padding: 0.5rem 0 0.5rem 0;
-  background-color: rgb(60,60,60);
+  background-color: hsla(175, 35%, 10%, 0.9);
   text-align: center;
   color: hsl(360, 100%, 100%);
   border-radius: 1rem;
 }
 
 .banner-text a:hover {
-  background-color: rgb(30,30,30);
+  background-color: hsla(175, 35%, 10%, 1);
 }
 
 .banner-text a:active {
   background-color: rgb(200,200,200);
 }
 
+          /* First section for narrow screens */
+
+@media only screen and (max-width:960px) and (min-width:790px) {
+  .banner {
+    width: auto;
+  }
+
+  .banner-image-container {
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width:790px) and (min-width:480px){
+  .banner {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+  }
+
+  .banner-image-container {
+    width: 26rem;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  .banner {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+  }
+
+  .banner-image-container {
+    width: auto;
+    padding: 0;
+  }
+}
+
           /* Second section: how to visit the campus */
 
 .information-background {
-  background-color: hsl(175, 00%, 95%);
+  background-color: hsl(175, 0%, 95%);
 }
 
 .information {
@@ -168,29 +241,22 @@ nav p {
 
 .information-main-text h5 {
   margin: 2rem 0;
+  text-align: center;
 }
-
-.information-sidebar {
+.sidebar {
   width: 24rem;
 }
 
-.sidebar-item-container {
-  border: 1px hsl(360, 0%, 80%) solid;
-  border-right: none;
-}
-
-.sidebar-item-container:first-child {
+.information .sidebar-item-container:first-child {
   padding-top: 1rem;
-  border-top: 0;
-}
-
-.sidebar-item-container:last-child {
-  padding-bottom: 6rem;
-  border-bottom: 0;
 }
 
 .sidebar-item-container:nth-child(0n+2) {
   margin: 1px 0;
+}
+
+.information .sidebar-item-container:last-child {
+  padding-bottom: 6rem;
 }
 
 .sidebar-item {
@@ -214,26 +280,72 @@ nav p {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 4rem;
 }
 
-.sidebar {
+.sidebar-text {
   width: 15.65rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.sidebar p {
+.sidebar-text p {
   padding: 0.5rem 0;
   line-height: 1.2rem;
 }
 
-.sidebar a {
+.sidebar-text a {
   color: hsl(210, 50%, 50%);
 }
 
-.sidebar p,a {
+.sidebar-text p,a {
   font-size: 0.8rem;
+}
+
+          /* Second section responsive */
+
+@media only screen and (max-width:960px) and (min-width: 790px) {
+  .information {
+    width: auto;
+  }
+
+  .information-main {
+    width: 60%;
+  }
+
+  .information-main-image-container {
+    width: auto
+  }
+
+  .information-main-text {
+    display: none;
+  }
+
+  .information-sidebar {
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 790px) and (min-width:480px) {
+  .information {
+    flex-direction: column;
+  }
+
+  .information-main-text {
+    display: none;
+  }
+
+  .sidebar-item {
+    flex-direction: column;
+  }
+
+}
+
+@media only screen and (max-width:480px) {
+  .information-main {
+    display: none;
+  }
 }
 
           /* Third section: courses offered */
@@ -257,9 +369,9 @@ nav p {
   justify-content: space-between;
   align-items: center;
   width: 52rem;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
   overflow: hidden;
-  height: 42rem;
+  height: 41rem;
 }
 
 .course-card {
@@ -283,20 +395,99 @@ nav p {
 .course-image-container img {
   width: 100%;
   height: auto;
+  opacity: 0.75;
+}
+
+.course-image-container img:hover {
+  opacity: 1;
 }
 
 .course-card-text {
   height: 8rem;
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
   background-color: white;
+}
+
+.course-card-text ul {
+  margin-left: 1rem;
+}
+
+.course-card-text h3 {
+  text-align: center;
+  color: hsl(360, 0%, 100%);
+  background-color: hsla(175, 35%, 10%, 0.9);
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+}
+
+.course-card-text h3:hover {
+  background-color: hsla(175, 35%, 10%, 1);
 }
 
 .course-card-text h5 {
   text-transform: uppercase;
   margin: 0.5rem 0;
+  text-decoration: underline;
+  text-align: center;
+  color: hsl(360, 0%, 20%);
 }
 
           /* Fourth section: thesis exhibit */
+
+.thesis-background {
+  background-color: hsl(175, 0%, 95%);
+}
+
+.thesis {
+  display: flex;
+  flex-direction: column;
+}
+
+.thesis .section-title {
+  margin-bottom: 1rem;
+}
+
+.thesis-container {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.thesis-main-container {
+  display: flex;
+  flex-direction: column;
+  width: 33rem;
+  margin: 1rem 1.5rem 0 1.5rem;
+}
+
+.thesis-main-container h3 {
+  margin: 1.5rem 0;
+}
+
+.thesis-main-container p {
+  line-height: 1.5rem;
+  color: hsl(360, 0%, 30%);
+  text-align: center;
+}
+
+          /* Footer */
+
+footer {
+  background-color: hsl(170, 0%, 90%);
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.footer-main p {
+  padding: 0 1.5rem;
+}
+
+.legal-boilerplate {
+  display: flex;
+  flex-direction: row;
+}

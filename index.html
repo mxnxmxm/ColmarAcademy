@@ -5,6 +5,7 @@
     <title>Colmar Academy</title>
     <link rel="stylesheet" href="./resources/css/reset.css" type="text/css">
     <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Playfair+Display:400i" rel="stylesheet">
   </head>
   <body>
 
@@ -23,6 +24,10 @@
           <p>For companies</p>
           <p>Sign in</p>
         </nav>
+        <img class="mobile-icons" src="./resources/images/ic-on-campus.svg">
+        <img class="mobile-icons" src="./resources/images/ic-online.svg">
+        <img class="mobile-icons" src="./resources/images/ic-login.svg">
+        </div>
       </div>
     </header>
 
@@ -51,8 +56,8 @@
           </div>
           <div class="information-main-text">
             <h2>It doesn't hurt to keep practicing</h2>
-            <p>"Proin tempus sodales odio et auctor. Sed interdum tincidunt lectus et euismod. Cras molestie elit dui, eget euismod tortor fermentum eu. Suspendisse egestas efficitur leo, at suscipit ipsum imperdiet eu.</p>
-            <h5>Emanuel, Sr Strategist at Hiring.com</h5>
+            <p class="quotation">"Proin tempus sodales odio et auctor. Sed interdum tincidunt lectus et euismod. Cras molestie elit dui, eget euismod tortor fermentum eu. Suspendisse egestas efficitur leo, at suscipit ipsum imperdiet eu."</p>
+            <h5>&#8212 Emanuel, Sr. Strategist at Hiring.com</h5>
           </div>
         </div>
         <div class="information-sidebar">
@@ -61,7 +66,7 @@
               <div class="sidebar-image-container">
                 <img src="./resources/images/information-orientation.jpg">
               </div>
-              <div class="sidebar">
+              <div class="sidebar-text">
                 <h3>Orientation date</h3>
                 <p>Tue 10/11 &amp; Wed 10/12: 8am-3pm</p>
                 <a href="#">Read more</a>
@@ -73,7 +78,7 @@
               <div class="sidebar-image-container">
                 <img src="./resources/images/information-campus.jpg">
               </div>
-              <div class="sidebar">
+              <div class="sidebar-text">
                 <h3>Our campus</h3>
                 <p>Find which campus is close by you</p>
                 <a href="#">Read more</a>
@@ -85,7 +90,7 @@
               <div class="sidebar-image-container">
                 <img src="./resources/images/information-guest-lecture.jpg">
               </div>
-              <div class="sidebar">
+              <div class="sidebar-text">
                 <h3>Our guest lecture</h3>
                 <p>Join a keynote with Oliver Sack about music in medical treatment</p>
                 <a href="#">Read more</a>
@@ -111,7 +116,12 @@
             <div class="course-card-text">
               <h3>Software engineering</h3>
               <h5>Courses</h5>
-              <p>Web Development, Mobile Development, iOT, APIs</p>
+              <ul>
+                <li>Web Development</li>
+                <li>Mobile Development</li>
+                <li>iOS</li>
+                <li>APIs</li>
+              </ul>
             </div>
           </div>
           <div class="course-card">
@@ -121,7 +131,12 @@
             <div class="course-card-text">
               <h3>Computer Art</h3>
               <h5>Courses</h5>
-              <p>Imaging &amp; Design, Web Design, Motion Graphics &amp; Visual Effects, Computer Animation</p>
+              <ul>
+                <li>Imaging &amp; Design</li>
+                <li>Web Design</li>
+                <li>Motion Graphics &amp; Visual Effects</li>
+                <li>Computer Animation</li>
+              </ul>
             </div>
           </div>
           <div class="course-card">
@@ -131,7 +146,11 @@
             <div class="course-card-text">
               <h3>Design</h3>
               <h5>Courses</h5>
-              <p>User Experience Design, User Research, Visual Design</p>
+              <ul>
+                <li>User Experience Design</li>
+                <li>User Research</li>
+                <li>Visual Design</li>
+              </ul>
             </div>
           </div>
           <div class="course-card">
@@ -141,7 +160,12 @@
             <div class="course-card-text">
               <h3>Data</h3>
               <h5>Courses</h5>
-              <p>Data Science, Big Data, SQL, Data Visualization</p>
+              <ul>
+                <li>Data Science</li>
+                <li>Big Data</li>
+                <li>SQL</li>
+                <li>Data Visualization</li>
+              </ul>
             </div>
           </div>
           <div class="course-card">
@@ -151,7 +175,11 @@
             <div class="course-card-text">
               <h3>Business</h3>
               <h5>Courses</h5>
-              <p>Product Development, Business Development, Startup</p>
+              <ul>
+                <li>Product Development</li>
+                <li>Business Development</li>
+                <li>Startup</li>
+              </ul>
             </div>
           </div>
           <div class="course-card">
@@ -161,7 +189,11 @@
             <div class="course-card-text">
               <h3>Marketing</h3>
               <h5>Courses</h5>
-              <p>Analytics, Content Marketing, Mobile Marketing</p>
+              <ul>
+                <li>Analytics</li>
+                <li>Content Marketing</li>
+                <li>Mobile Marketing</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -177,20 +209,53 @@
         </div>
         <div class="thesis-container">
           <div class="thesis-main-container">
-            <video width="528" height="297" src="./resources/videos/thesis.mp4">
-
+            <video width="528" height="297" controls>
+              <source src="./resources/videos/thesis.mp4" type="video/mp4">
             </video>
             <h3>Reimagine urban</h3>
-            <p>"Proin tempus sodales odio et auctor. Sed interdum tincidunt lectus et euismod. Cras molestie elit dui, eget euismod tortor fermentum eu. Suspendisse egestas efficitur leo, at suscipit ipsum imperdiet eu."</p>
+            <p class="quotation">"Proin tempus sodales odio et auctor. Sed interdum tincidunt lectus et euismod. Cras molestie elit dui, eget euismod tortor fermentum eu. Suspendisse egestas efficitur leo, at suscipit ipsum imperdiet eu."</p>
           </div>
-          <div class="thesis-sidebar">
-
+          <div class="sidebar">
+            <div class="sidebar-item-container">
+              <div class="sidebar-item">
+                <div class="sidebar-image-container">
+                  <img src="./resources/images/thesis-fisma.jpg">
+                </div>
+                <div class="sidebar-text">
+                  <h3>Fisma: Design and Prototype</h3>
+                  <p>Designer showcase of new prototype product</p>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-item-container">
+              <div class="sidebar-item">
+                <div class="sidebar-image-container">
+                  <img src="./resources/images/thesis-now-and-then.jpg">
+                </div>
+                <div class="sidebar-text">
+                  <h3>Now and then</h3>
+                  <p>Research study about New York</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
 <!-- Footer -->
+
+    <footer>
+      <div class="footer-main site-container">
+        <div class="copyright">
+          <p>&copy; 2016 Colmar Academy Inc. All rights reserved.</p>
+        </div>
+        <div class="legal-boilerplate">
+          <p>Terms</p>
+          <p>Privacy</p>
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>
