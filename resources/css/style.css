@@ -6,6 +6,7 @@ html {
 .site-container {
   width: 60rem;
   margin: 0 auto;
+
 }
 
 h2 {
@@ -171,7 +172,11 @@ nav p {
   }
 
   .banner-image-container {
-    width: 55%;
+    width: 60%;
+  }
+
+  .banner-text {
+    width: 40%;
   }
 }
 
@@ -216,23 +221,20 @@ nav p {
   display: flex;
   flex-direction: column;
   width: 36rem;
+  padding: 0 1.5rem;
 }
 
 .information-main-image-container {
   width: 33rem;
   height: auto;
   overflow: hidden;
-  padding: 2rem 1.5rem;
+  padding: 2rem 0;
 }
 
 .information-main-image-container img {
   max-width: 100%;
   height: auto;
   display: block;
-}
-
-.information-main-text {
-  margin: 0 1.5rem;
 }
 
 .information-main-text h2 {
@@ -243,8 +245,9 @@ nav p {
   margin: 2rem 0;
   text-align: center;
 }
-.sidebar {
-  width: 24rem;
+
+.information-sidebar {
+  padding: 0 1.5rem;
 }
 
 .information .sidebar-item-container:first-child {
@@ -261,7 +264,7 @@ nav p {
 
 .sidebar-item {
   display: flex;
-  width: 24rem;
+  width: 21.5rem;
   margin-right: 0;
 }
 
@@ -276,11 +279,21 @@ nav p {
   padding: 1rem;
 }
 
+.mobile-sidebar-image-container {
+  display: none;
+}
+
 .sidebar-image-container img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 4rem;
+}
+
+.mobile-sidebar-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .sidebar-text {
@@ -318,18 +331,48 @@ nav p {
     width: auto
   }
 
-  .information-main-text {
-    display: none;
+  .information-sidebar {
+    width: 40%;
   }
 
-  .information-sidebar {
-    width: auto;
+  .sidebar-item-container {
+    width: 100%;
   }
+
+  .sidebar-item {
+    width: 93%;
+  }
+
+  .sidebar-image-container {
+    width: 30%;
+    height: auto;
+  }
+
+  .sidebar-text {
+    width: 70%;
+
+  }
+
 }
 
 @media only screen and (max-width: 790px) and (min-width:480px) {
   .information {
     flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .site-container {
+    width: 100%
+  }
+
+  .information-main {
+    display: block;
+  }
+
+  .information-main-image-container {
+    width: 26rem;
+    margin: 0 auto;
   }
 
   .information-main-text {
@@ -338,13 +381,41 @@ nav p {
 
   .sidebar-item {
     flex-direction: column;
+    width: auto;
+    align-items: center;
+  }
+
+  .sidebar-text {
+    text-align: center;
   }
 
 }
 
 @media only screen and (max-width:480px) {
+  .site-container {
+    width: 100%
+  }
+
   .information-main {
     display: none;
+  }
+
+  .sidebar-item {
+    flex-direction: column;
+    width: auto;
+  }
+
+  .sidebar-text {
+    margin: 1rem 0;
+  }
+
+  .sidebar-image-container {
+    display: none;
+  }
+
+  .mobile-sidebar-image-container {
+    display: block;
+    width: 100%;
   }
 }
 
@@ -434,6 +505,49 @@ nav p {
   color: hsl(360, 0%, 20%);
 }
 
+          /* Third section responsive */
+
+@media only screen and (max-width:960px)  {
+  .site-container {
+    width: 100%;
+  }
+
+  .courses-grid {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .course-card {
+
+  }
+
+  .course-card-text {
+    height: 100%;
+    background-color: hsla(175, 35%, 10%, 0.9);
+  }
+
+  .course-card-text:hover {
+    background-color: hsla(175, 35%, 10%, 1);
+  }
+
+  .course-card-text h3 {
+    border-radius: 0;
+    background-color: hsla(175, 35%, 10%, 0);
+  }
+
+  .course-card-text h3:hover{
+    background-color: none;
+  }
+
+  .course-image-container {
+    display: none;
+  }
+
+  .course-card-text ul, h5 {
+    display: none;
+  }
+}
+
           /* Fourth section: thesis exhibit */
 
 .thesis-background {
@@ -471,6 +585,22 @@ nav p {
   text-align: center;
 }
 
+          /* Fourth section responsive */
+
+@media only screen and (max-width:960px) {
+  .thesis-container .sidebar {
+    display: none;
+  }
+
+  .thesis-main-container h3, p {
+    display: none;
+  }
+
+  .thesis-main-container {
+    margin: 0 auto;
+  }
+}
+
           /* Footer */
 
 footer {
@@ -490,4 +620,13 @@ footer {
 .legal-boilerplate {
   display: flex;
   flex-direction: row;
+}
+
+@media only screen and (max-width:960px) {
+
+  .copyright p {
+    height: 1.5rem;
+    display: inline;
+    margin-top: 2rem;
+  }
 }
